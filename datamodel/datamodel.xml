@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DataModelInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.qualisystems.com/ResourceManagement/DataModelSchema.xsd">
   	<Attributes>
+		<AttributeInfo Name="Configured Controllers" Type="String" DefaultValue="1000" IsReadOnly="true"
+    				   Description="The controllers configured on this port in case of port that supports multi controllers.">
+      		<Rules>
+	       		<Rule Name="Available For Abstract Resources" />
+        		<Rule Name="Setting" />
+      		</Rules>
+    	</AttributeInfo>
     	<AttributeInfo Name="Client Install Path" Type="String" DefaultValue="" IsReadOnly="false"
     				   Description="The path in which the traffic client is installed on the Execution Server. For example 'C:/Program Files (x86)/Ixia/IxOS/6.90-EA'.">
       		<Rules>
