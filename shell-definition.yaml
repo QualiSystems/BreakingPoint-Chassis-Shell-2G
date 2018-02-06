@@ -19,12 +19,12 @@ node_types:
       auto_discovery_capability:
         type: cloudshell.capabilities.AutoDiscovery
         properties:
-          Controller Address:
+          User:
             type: string
-          Controller TCP Port:
-            description:
-            type: integer
-            default: 443
+            default: admin
+          Password:
+            type: string
+            default: admin
     artifacts:
       icon:
         file: shell-icon.png

@@ -10,7 +10,7 @@ AVAILABLE_SHELL_TYPES = ["CS_Switch",
 
 
 class GenericResource(AbstractResource):
-    RESOURCE_MODEL = "Chassis"
+    RESOURCE_MODEL = "Breaking Point Chassis"
     RELATIVE_PATH_TEMPLATE = ""
     NAME_TEMPLATE = 'Chassis {}'
 
@@ -70,7 +70,7 @@ class GenericResource(AbstractResource):
 
 
 class GenericModule(AbstractResource):
-    RESOURCE_MODEL = "Generic Traffic Module"
+    RESOURCE_MODEL = "Generic Traffic Generator Module"
     RELATIVE_PATH_TEMPLATE = "M"
     NAME_TEMPLATE = 'Module {}'
 

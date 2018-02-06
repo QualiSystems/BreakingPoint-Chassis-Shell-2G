@@ -1,6 +1,6 @@
 import re
 
-from bp_chassis.standard.tg_chassis.autoload import GenericResource, GenericModule, GenericPort
+from bp_chassis.standard.tg_chassis.autoload_resource_model import GenericResource, GenericModule, GenericPort
 
 
 class BPPortsInfo(object):
