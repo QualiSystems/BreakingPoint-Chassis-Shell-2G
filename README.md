@@ -7,13 +7,13 @@
 
 ![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
 
-# **BreakingPoint Chassis Shell 2G**  
+# **BreakingPoint Chassis 2G Shell**  
 
-Release date: 2019-2-14
+Release date: February 2019
 
-`Shell version: 1.0.0`
+Shell version: 1.0.0
 
-`Document version: 1.0`
+Document version: 1.0
 
 # In This Guide
 
@@ -35,14 +35,12 @@ CloudShell's traffic generator shells enable you to conduct traffic test activit
 
 For additional information on traffic generator shell architecture, and setting up and using a traffic generator in CloudShell, see the [Traffic Generators Overiew](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/LAB-MNG/Trffc-Gens.htm?Highlight=traffic%20generator%20overview) online help topic.
 
-### **BreakingPoint Chassis Shell 2G**
-**BreakingPoint Chassis Shell 2G** provides you with capability device structure discovery for the resource. 
-
+### BreakingPoint Chassis 2G Shell
 To model the traffic generator in CloudShell, you must use the following shells:
 
-▪ **[BreakingPoint Chassis Shell 2G](https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G)** , which provides data model and autoload functionality to model and load the chassis to resource management.
+▪ [BreakingPoint Chassis 2G Shell](https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G) , which provides data model and autoload functionality to model and load the chassis to resource management.
 
-▪ **[BreakingPoint Controller Shell 2G](https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G) (service)**, which provides functionality to load test configuration, run tests, get test results, etc.
+▪ [BreakingPoint Controller Shell 2G](https://github.com/QualiSystems/BreakingPoint-Controller-Shell-2G) (service), which provides functionality to load test configuration, run tests, get test results, etc.
 
 ### Standard version
 
@@ -79,9 +77,9 @@ The chassis families and models are listed in the following table:
 |Port Group|Generic Port Group|Generic Port Group|
 |Port|Generic Traffic Generator Port|Generic Traffic Generator Port|
 
-#### **BreakingPoint Chassis Shell 2G Attributes**
+#### **BreakingPoint Chassis 2G Shell Attributes**
 
-The attribute names and types are listed in the following sections of the Traffic Generator Standards:
+The attribute names and types are listed in the following sections of the Traffic Generator Standard:
 
 * [Traffic Generator Chassis Shell Standard attributes](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/Traffic%20Generator%20Chassis%20Standard.md#attributes)
 
@@ -94,12 +92,12 @@ For Traffic Generator shells, commands are configured and executed from the cont
 |:-----|:-----|
 |Autoload|Discovers the chassis, its hierarchy and attributes when creating the resource. The command can be rerun in the Inventory dashboard and not in the sandbox, as for other commands.|
 
-The command names and types are listed in the following sections of the Traffic Generator Standards:
+The command names and types are listed in the following sections of the Traffic Generator Standard:
 
 * [Traffic Generator Chassis Shell Standard commands](https://github.com/QualiSystems/cloudshell-standards/blob/master/Documentation/Traffic%20Generator%20Chassis%20Standard.md#Commands)
 
 # Downloading the Shell
-The **BreakingPoint Chassis Shell 2G** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
+The **BreakingPoint Chassis 2G Shell** is available from the [Quali Community Integrations](https://community.quali.com/integrations) page. 
 
 Download the files into a temporary location on your local machine. 
 
@@ -111,7 +109,7 @@ The shell comprises:
 |bp-offline-dependencies-2G-x.x.x.zip|Shell Python dependencies (for offline deployments only)|
 
 # Importing and Configuring the Shell
-This section describes how to import the **BreakingPoint Chassis Shell 2G** and configure and modify the shell’s devices.
+This section describes how to import the **BreakingPoint Chassis 2G Shell** and configure and modify the shell’s devices.
 
 ### Importing the shell into CloudShell
 
@@ -180,9 +178,9 @@ You can also modify existing resources, see [Managing Resources in the Inventory
 
 **To create a resource for the device:**
   1. In the CloudShell Portal, in the **Inventory** dashboard, click **Add New**. 
-     ![Image][2]
+     ![](https://github.com/stsuberi/SaraTest/blob/master/create_a_resource_device.png)
      
-  2. From the list, select **BreakingPoint Chassis Shell 2G**.
+  2. From the list, select **BreakingPoint Chassis 2G Shell**.
   
   3. Enter the **Name** and **IP address** of the device (if applicable).
   
@@ -209,34 +207,6 @@ In online mode, the execution server automatically downloads and extracts the ap
 **To update online Python dependencies:**
 * If there is a live instance of the shell's driver or script, terminate the shell’s instance, as explained [here](http://help.quali.com/Online%20Help/9.0/Portal/Content/CSP/MNG/Mng-Exctn-Srv-Exct.htm#Terminat). If an instance does not exist, the execution server will download the Python dependencies the next time a command of the driver or script runs.
 
-# Associating a CloudShell Service to a Non-Global Domain
-(if this is not a service shell - remove section)
-
-In order to expose a service to users of a domain that is not the Global domain, you must associate the service to the domain. To do this, you need to associate the service to a category that is assigned to the domain.
-
-When you import a service shell, most shells are automatically assigned a default service category which is associated with the Global domain. For custom shells, this may not be true.
-
-**To associate the BreakingPoint Chassis Shell 2G 2G service to a domain:**
-
-**Note:** The association process differs depending on the type of shell - second generation (2G) shell or first generation (1G) shell. The instructions below detail the steps for a 2G service shell.
-
-1. (Optional) To associate the service to a new service category(s): 
-
-	**Note:** If you do not want to add a new category(s) to this shell, you can use the default category that comes out-of-the-box (if it exists).
-	
-	• Modify the *shelldefinition.yaml* file to add a service category(s) to the shell. See the CloudShell Developer Guide’s [Associating categories to a service shell](https://devguide.quali.com/shells/9.0.0/customizing-shells.html#associating-categories-to-a-service-shell) article. Note that when importing the shell into CloudShell, the new categories will be linked automatically with the Global domain.
-	
-2. Associate the shell’s service category (either the out-of-the-box category or the new category you created in step 1) to a non-Global domain.
-	1. In the **Manage** dashboard, click **Categories** from the left sidebar, or **Domains** if you are a domain admin.
-	
-	2. Select **Services Categories**.
-	
-	3. Click the service category that is associated with your service shell.
-	
-	4. In the **Edit Category** dialog box, from the **Domains** drop-down list, select the desired domain(s).
-	
-	5. Click **Save**.
-
 # References
 To download and share integrations, see [Quali Community's Integrations](https://community.quali.com/integrations). 
 
@@ -250,3 +220,4 @@ To use traffic generator ports as abstract resources, see [CloudShell's Online H
 
 ## Release Notes
 ### What's New
+For release updates, see the shell's [GitHub releases page](https://github.com/QualiSystems/BreakingPoint-Chassis-Shell-2G/releases/tag/1.0.0).
