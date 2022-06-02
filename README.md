@@ -1,19 +1,12 @@
-![alt tag](https://travis-ci.org/QualiSystems/BreakingPoint-Chassis-Shell-2G.svg?branch=dev)
-[![Coverage Status](https://coveralls.io/repos/github/QualiSystems/BreakingPoint-Chassis-Shell-2G/badge.svg?branch=dev)](https://coveralls.io/github/QualiSystems/BreakingPoint-Chassis-Shell-2G?branch=dev)
-[![PyPI version](https://badge.fury.io/py/BreakingPoint-Chassis-Shell-2G.svg)](https://badge.fury.io/py/BreakingPoint-Chassis-Shell-2G)
-[![Dependency Status](https://dependencyci.com/github/QualiSystems/BreakingPoint-Chassis-Shell-2G/badge)](https://dependencyci.com/github/QualiSystems/BreakingPoint-Chassis-Shell-2G)
-[![Stories in Ready](https://badge.waffle.io/QualiSystems/BreakingPoint-Chassis-Shell-2G.svg?label=ready&title=Ready)](http://waffle.io/QualiSystems/BreakingPoint-Chassis-Shell-2G)
-
-
-![](https://github.com/stsuberi/SaraTest/blob/master/cloudshell_logo.png)
+![](https://github.com/QualiSystems/cloudshell-shells-documentaion-templates/blob/master/cloudshell_logo.png)
 
 # **BreakingPoint Chassis 2G Shell**  
 
-Release date: February 2019
+Release date: June 2022
 
-Shell version: 1.0.0
+Shell version: 3.0.0
 
-Document version: 1.0
+Document version: 1.1
 
 # In This Guide
 
@@ -54,13 +47,9 @@ Release: **Ixia BreakingPoint 2G shells**
 
 - CloudShell versions: 
 
-   ▪ 8.3 GA Patch 3 and above patches
-	
-   ▪ 9.0 GA Patch 2 and above patches
-	
-   ▪ 9.1 GA and above patches, and above CloudShell versions
+    - v2022.1.0 and above patches
 
-- BreakingPoint application: 8.20 and above
+- BreakingPoint application: 9.00 and above
 
 ### Data Model
 
