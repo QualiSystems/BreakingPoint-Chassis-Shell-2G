@@ -46,10 +46,9 @@ For detailed information about the shell’s structure and attributes, see the [
 Release: **Ixia BreakingPoint 2G shells**
 
 - CloudShell versions: 
-
-    - v2022.1.0 and above patches
-
-- BreakingPoint application: 9.00 and above
+  - v2022.1.0 and above patches
+- BreakingPoint application:
+  - 9.00 and above
 
 ### Data Model
 
