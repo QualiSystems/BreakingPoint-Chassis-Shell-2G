@@ -12,7 +12,7 @@ metadata:
   template_icon: shell-icon.png
 
 node_types:
-  vendor.resource.BreakingPoint Chassis Shell 2G:
+  vendor.resource.BreakingPoint Chassis 2G:
     derived_from: cloudshell.nodes.TrafficGeneratorChassis
     capabilities:
       auto_discovery_capability:
