@@ -25,7 +25,7 @@ def valid(response: Response) -> dict:
 
 
 class BreakingPointChassisDriver(ResourceDriverInterface):
-    """STC chassis shell driver."""
+    """BreakingPoint chassis shell driver."""
 
     def __init__(self) -> None:
         """Initialize object variables, actual initialization is performed in initialize method."""

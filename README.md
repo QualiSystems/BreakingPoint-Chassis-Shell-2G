@@ -2,7 +2,7 @@
 
 # **BreakingPoint Chassis 2G Shell**  
 
-Release date: June 2022
+Release date: July 2022
 
 Shell version: 3.0.0
 
