@@ -57,7 +57,7 @@ def autoload_context(test_helpers: TestHelpers, dut: list) -> AutoLoadCommandCon
         f"{BREAKINGPOINT_CHASSIS_MODEL}.User": user,
         f"{BREAKINGPOINT_CHASSIS_MODEL}.Password": password,
     }
-    yield test_helpers.autoload_command_context(TGN_CHASSIS_FAMILY, BREAKINGPOINT_CHASSIS_MODEL, address, attributes)
+    return test_helpers.autoload_command_context(TGN_CHASSIS_FAMILY, BREAKINGPOINT_CHASSIS_MODEL, address, attributes)
 
 
 @pytest.fixture()
@@ -76,13 +76,13 @@ def autoload_resource(session: CloudShellAPISession, test_helpers: TestHelpers, 
 
 
 def test_autoload(driver: BreakingPointChassisDriver, autoload_context: AutoLoadCommandContext) -> None:
-    """Test direct (driver) auto load command."""
+    """Test direct (driver) autoload command."""
     inventory = driver.get_inventory(autoload_context)
     print_inventory(inventory)
 
 
 def test_autoload_session(session: CloudShellAPISession, autoload_resource: ResourceInfo, dut: list) -> None:
-    """Test indirect (shell) auto load command."""
+    """Test indirect (shell) autoload command."""
     session.AutoLoad(autoload_resource.Name)
     resource_details = session.GetResourceDetails(autoload_resource.Name)
     assert len(resource_details.ChildResources) == 2
