@@ -72,14 +72,14 @@ class LegacyUtils(object):
         return inspect.getmembers(sys.modules[__name__], inspect.isclass)
 
 
-class BreakingpointChassisShell2G(object):
+class BreakingpointChassis2G(object):
     def __init__(self, name):
         """
         
         """
         self.attributes = {}
         self.resources = {}
-        self._cloudshell_model_name = 'BreakingPoint Chassis Shell 2G'
+        self._cloudshell_model_name = 'BreakingPoint Chassis 2G'
         self._name = name
 
     def add_sub_resource(self, relative_path, sub_resource):
@@ -92,9 +92,9 @@ class BreakingpointChassisShell2G(object):
         :param context: cloudshell.shell.core.driver_context.ResourceCommandContext
         :type context: cloudshell.shell.core.driver_context.ResourceCommandContext
         :return:
-        :rtype BreakingpointChassisShell2G
+        :rtype BreakingpointChassis2G
         """
-        result = BreakingpointChassisShell2G(name=context.resource.name)
+        result = BreakingpointChassis2G(name=context.resource.name)
         for attr in context.resource.attributes:
             result.attributes[attr] = context.resource.attributes[attr]
         return result
@@ -152,14 +152,14 @@ class BreakingpointChassisShell2G(object):
         Returns the name of the Cloudshell model
         :return:
         """
-        return 'BreakingpointChassisShell2G'
+        return 'BreakingpointChassis2G'
 
     @property
     def user(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.User'] if 'BreakingPoint Chassis Shell 2G.User' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.User'] if 'BreakingPoint Chassis 2G.User' in self.attributes else None
 
     @user.setter
     def user(self, value):
@@ -167,14 +167,14 @@ class BreakingpointChassisShell2G(object):
         User with administrative privileges
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.User'] = value
+        self.attributes['BreakingPoint Chassis 2G.User'] = value
 
     @property
     def password(self):
         """
         :rtype: string
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.Password'] if 'BreakingPoint Chassis Shell 2G.Password' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.Password'] if 'BreakingPoint Chassis 2G.Password' in self.attributes else None
 
     @password.setter
     def password(self, value):
@@ -182,14 +182,14 @@ class BreakingpointChassisShell2G(object):
         Password
         :type value: string
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.Password'] = value
+        self.attributes['BreakingPoint Chassis 2G.Password'] = value
 
     @property
     def controller_tcp_port(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.Controller TCP Port'] if 'BreakingPoint Chassis Shell 2G.Controller TCP Port' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.Controller TCP Port'] if 'BreakingPoint Chassis 2G.Controller TCP Port' in self.attributes else None
 
     @controller_tcp_port.setter
     def controller_tcp_port(self, value):
@@ -197,14 +197,14 @@ class BreakingpointChassisShell2G(object):
         The TCP port of the traffic server. Relevant only in case an external server is configured. Default TCP port should be used if kept empty.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.Controller TCP Port'] = value
+        self.attributes['BreakingPoint Chassis 2G.Controller TCP Port'] = value
 
     @property
     def controller_address(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.Controller Address'] if 'BreakingPoint Chassis Shell 2G.Controller Address' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.Controller Address'] if 'BreakingPoint Chassis 2G.Controller Address' in self.attributes else None
 
     @controller_address.setter
     def controller_address(self, value):
@@ -212,14 +212,14 @@ class BreakingpointChassisShell2G(object):
         The IP address of the traffic server. Relevant only in case an external server is configured.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.Controller Address'] = value
+        self.attributes['BreakingPoint Chassis 2G.Controller Address'] = value
 
     @property
     def client_install_path(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.Client Install Path'] if 'BreakingPoint Chassis Shell 2G.Client Install Path' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.Client Install Path'] if 'BreakingPoint Chassis 2G.Client Install Path' in self.attributes else None
 
     @client_install_path.setter
     def client_install_path(self, value):
@@ -227,14 +227,14 @@ class BreakingpointChassisShell2G(object):
         The path in which the traffic client is installed on the Execution Server. For example "C:/Program Files (x86)/Ixia/IxLoad/5.10-GA".
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.Client Install Path'] = value
+        self.attributes['BreakingPoint Chassis 2G.Client Install Path'] = value
 
     @property
     def power_management(self):
         """
         :rtype: bool
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.Power Management'] if 'BreakingPoint Chassis Shell 2G.Power Management' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.Power Management'] if 'BreakingPoint Chassis 2G.Power Management' in self.attributes else None
 
     @power_management.setter
     def power_management(self, value=True):
@@ -242,14 +242,14 @@ class BreakingpointChassisShell2G(object):
         Used by the power management orchestration, if enabled, to determine whether to automatically manage the device power status. Enabled by default.
         :type value: bool
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.Power Management'] = value
+        self.attributes['BreakingPoint Chassis 2G.Power Management'] = value
 
     @property
     def serial_number(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.Serial Number'] if 'BreakingPoint Chassis Shell 2G.Serial Number' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.Serial Number'] if 'BreakingPoint Chassis 2G.Serial Number' in self.attributes else None
 
     @serial_number.setter
     def serial_number(self, value):
@@ -257,14 +257,14 @@ class BreakingpointChassisShell2G(object):
         The serial number of the resource.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.Serial Number'] = value
+        self.attributes['BreakingPoint Chassis 2G.Serial Number'] = value
 
     @property
     def server_description(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.Server Description'] if 'BreakingPoint Chassis Shell 2G.Server Description' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.Server Description'] if 'BreakingPoint Chassis 2G.Server Description' in self.attributes else None
 
     @server_description.setter
     def server_description(self, value):
@@ -272,7 +272,7 @@ class BreakingpointChassisShell2G(object):
         The full description of the server. Usually includes the OS, exact firmware version and additional characteritics of the device.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.Server Description'] = value
+        self.attributes['BreakingPoint Chassis 2G.Server Description'] = value
 
     @property
     def name(self):
@@ -357,7 +357,7 @@ class GenericTrafficGeneratorModule(object):
         """
         self.attributes = {}
         self.resources = {}
-        self._cloudshell_model_name = 'BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorModule'
+        self._cloudshell_model_name = 'BreakingPoint Chassis 2G.GenericTrafficGeneratorModule'
         self._name = name
 
     def add_sub_resource(self, relative_path, sub_resource):
@@ -437,7 +437,7 @@ class GenericTrafficGeneratorModule(object):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorModule.Version'] if 'BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorModule.Version' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.GenericTrafficGeneratorModule.Version'] if 'BreakingPoint Chassis 2G.GenericTrafficGeneratorModule.Version' in self.attributes else None
 
     @version.setter
     def version(self, value=''):
@@ -445,14 +445,14 @@ class GenericTrafficGeneratorModule(object):
         The firmware version of the resource.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorModule.Version'] = value
+        self.attributes['BreakingPoint Chassis 2G.GenericTrafficGeneratorModule.Version'] = value
 
     @property
     def serial_number(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorModule.Serial Number'] if 'BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorModule.Serial Number' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.GenericTrafficGeneratorModule.Serial Number'] if 'BreakingPoint Chassis 2G.GenericTrafficGeneratorModule.Serial Number' in self.attributes else None
 
     @serial_number.setter
     def serial_number(self, value=''):
@@ -460,7 +460,7 @@ class GenericTrafficGeneratorModule(object):
         
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorModule.Serial Number'] = value
+        self.attributes['BreakingPoint Chassis 2G.GenericTrafficGeneratorModule.Serial Number'] = value
 
     @property
     def name(self):
@@ -515,7 +515,7 @@ class GenericTrafficGeneratorPortGroup(object):
         """
         self.attributes = {}
         self.resources = {}
-        self._cloudshell_model_name = 'BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorPortGroup'
+        self._cloudshell_model_name = 'BreakingPoint Chassis 2G.GenericTrafficGeneratorPortGroup'
         self._name = name
 
     def add_sub_resource(self, relative_path, sub_resource):
@@ -628,7 +628,7 @@ class GenericTrafficGeneratorPort(object):
         """
         self.attributes = {}
         self.resources = {}
-        self._cloudshell_model_name = 'BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorPort'
+        self._cloudshell_model_name = 'BreakingPoint Chassis 2G.GenericTrafficGeneratorPort'
         self._name = name
 
     def add_sub_resource(self, relative_path, sub_resource):
@@ -708,7 +708,7 @@ class GenericTrafficGeneratorPort(object):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorPort.Media Type'] if 'BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorPort.Media Type' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.GenericTrafficGeneratorPort.Media Type'] if 'BreakingPoint Chassis 2G.GenericTrafficGeneratorPort.Media Type' in self.attributes else None
 
     @media_type.setter
     def media_type(self, value):
@@ -716,7 +716,7 @@ class GenericTrafficGeneratorPort(object):
         Interface media type. Possible values are Fiber and/or Copper (comma-separated).
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.GenericTrafficGeneratorPort.Media Type'] = value
+        self.attributes['BreakingPoint Chassis 2G.GenericTrafficGeneratorPort.Media Type'] = value
 
     @property
     def name(self):
@@ -801,7 +801,7 @@ class GenericPowerPort(object):
         """
         self.attributes = {}
         self.resources = {}
-        self._cloudshell_model_name = 'BreakingPoint Chassis Shell 2G.GenericPowerPort'
+        self._cloudshell_model_name = 'BreakingPoint Chassis 2G.GenericPowerPort'
         self._name = name
 
     def add_sub_resource(self, relative_path, sub_resource):
@@ -881,7 +881,7 @@ class GenericPowerPort(object):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Model'] if 'BreakingPoint Chassis Shell 2G.GenericPowerPort.Model' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Model'] if 'BreakingPoint Chassis 2G.GenericPowerPort.Model' in self.attributes else None
 
     @model.setter
     def model(self, value):
@@ -889,14 +889,14 @@ class GenericPowerPort(object):
         The device model. This information is typically used for abstract resource filtering.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Model'] = value
+        self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Model'] = value
 
     @property
     def serial_number(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Serial Number'] if 'BreakingPoint Chassis Shell 2G.GenericPowerPort.Serial Number' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Serial Number'] if 'BreakingPoint Chassis 2G.GenericPowerPort.Serial Number' in self.attributes else None
 
     @serial_number.setter
     def serial_number(self, value):
@@ -904,14 +904,14 @@ class GenericPowerPort(object):
         
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Serial Number'] = value
+        self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Serial Number'] = value
 
     @property
     def version(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Version'] if 'BreakingPoint Chassis Shell 2G.GenericPowerPort.Version' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Version'] if 'BreakingPoint Chassis 2G.GenericPowerPort.Version' in self.attributes else None
 
     @version.setter
     def version(self, value):
@@ -919,14 +919,14 @@ class GenericPowerPort(object):
         The firmware version of the resource.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Version'] = value
+        self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Version'] = value
 
     @property
     def port_description(self):
         """
         :rtype: str
         """
-        return self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Port Description'] if 'BreakingPoint Chassis Shell 2G.GenericPowerPort.Port Description' in self.attributes else None
+        return self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Port Description'] if 'BreakingPoint Chassis 2G.GenericPowerPort.Port Description' in self.attributes else None
 
     @port_description.setter
     def port_description(self, value):
@@ -934,7 +934,7 @@ class GenericPowerPort(object):
         The description of the port as configured in the device.
         :type value: str
         """
-        self.attributes['BreakingPoint Chassis Shell 2G.GenericPowerPort.Port Description'] = value
+        self.attributes['BreakingPoint Chassis 2G.GenericPowerPort.Port Description'] = value
 
     @property
     def name(self):

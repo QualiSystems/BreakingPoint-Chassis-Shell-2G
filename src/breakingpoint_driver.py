@@ -12,7 +12,7 @@ from cloudshell.shell.core.session.cloudshell_session import CloudShellSessionCo
 from cloudshell.traffic.rest_api_helpers import RestClientException, RestClientUnauthorizedException
 from requests import Response
 
-from breakingpoint_data_model import BreakingpointChassisShell2G, GenericTrafficGeneratorModule, GenericTrafficGeneratorPort
+from breakingpoint_data_model import BreakingpointChassis2G, GenericTrafficGeneratorModule, GenericTrafficGeneratorPort
 
 
 def valid(response: Response) -> dict:
@@ -30,7 +30,7 @@ class BreakingPointChassisDriver(ResourceDriverInterface):
     def __init__(self) -> None:
         """Initialize object variables, actual initialization is performed in initialize method."""
         self.logger: logging.Logger = None
-        self.resource: BreakingpointChassisShell2G = None
+        self.resource: BreakingPointChassisDriver = None
         self.bps_session: Dict[str, str] = {}
         self.base_url = ""
 
@@ -45,7 +45,7 @@ class BreakingPointChassisDriver(ResourceDriverInterface):
 
     def get_inventory(self, context: ResourceCommandContext) -> AutoLoadDetails:
         """Return device structure with all standard attributes."""
-        self.resource = BreakingpointChassisShell2G.create_from_context(context)
+        self.resource = BreakingpointChassis2G.create_from_context(context)
         address = context.resource.address
         user = self.resource.user
         self.logger.debug(f"User - {user}")
@@ -78,8 +78,7 @@ class BreakingPointChassisDriver(ResourceDriverInterface):
         gen_module = GenericTrafficGeneratorModule(f"Module{module_id}")
         self.resource.add_sub_resource(f"M{module_id}", gen_module)
         gen_module.model_name = module["model"]
-        gen_module.serial_number = module["serialNumber"]
-
+        gen_module.serial_number = module.get("serialNumber", "")
         for port in module["port"]:
             self._load_port(gen_module, port)
 
