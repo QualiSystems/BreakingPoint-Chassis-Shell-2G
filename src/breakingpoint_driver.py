@@ -85,7 +85,7 @@ class BreakingPointChassisDriver(ResourceDriverInterface):
     @staticmethod
     def _load_port(gen_module: GenericTrafficGeneratorModule, port: dict) -> None:
         """Get port resource and attributes."""
-        port_id = str(int(port["id"]) + 1)
+        port_id = str(int(port["id"]))
         gen_port = GenericTrafficGeneratorPort(f"Port{port_id}")
         gen_module.add_sub_resource(f"P{port_id}", gen_port)
         gen_port.max_speed = port["speed"]

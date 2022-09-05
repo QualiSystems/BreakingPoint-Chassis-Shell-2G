@@ -14,7 +14,7 @@ from shellfoundry_traffic.test_helpers import TestHelpers, create_session_from_c
 from breakingpoint_driver import BreakingPointChassisDriver
 
 
-@pytest.fixture(params=[("192.168.26.72", "admin", "DxTbqlSgAVPmrDLlHvJrsA==")])
+@pytest.fixture(params=[("192.168.26.49", "admin", "DxTbqlSgAVPmrDLlHvJrsA==")])
 def dut(request: SubRequest) -> list:
     """Yield BreakingPoint device under test parameters."""
     return request.param
